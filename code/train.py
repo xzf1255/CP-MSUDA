@@ -109,7 +109,7 @@ def main():
             
         # setting: Domain Generalization
         else:
-            num = solver.train_gcn_baseline(t, record_file=record_train)
+            num = solver.train_C_baseline(t, record_file=record_train)
 
         # test on target domain
         
