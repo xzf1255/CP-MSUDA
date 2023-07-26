@@ -1,6 +1,9 @@
 # CP-MSUDA
 A PyTorch implementation of 'Combined Prototype for Multi-source Unsupervised
-Domain Adaptation‘.
+Domain Adaptation'.
+
+![](imgs/img.png)
+
 The contributions of this paper are summarized as follows. 
 
 *  Toward the MSUDA problem, We propose a contrastive combined prototype method,named CP-MSUDA. Such a method can measure the transferable abilities of each source by calculating combined prototypes. The combined prototypes can help reflect the features of each class in source domains.
@@ -20,18 +23,37 @@ The contributions of this paper are summarized as follows.
 * [PACS](https://github.com/MachineLearning2020/Homework3-PACS/tree/master/PACS)
 * [office\_ caltech\_10](https://gitcode.net/mirrors/jindongwang/transferlearning/-/blob/master/data/dataset.md#office+caltech)
 
-### Training
+### Pre-trained Models
+
++ [ResNet-18](https://download.pytorch.org/models/resnet18-5c106cde.pth)
++ [ResNet-101](https://download.pytorch.org/models/resnet101-5d3b4d8f.pth)
+
+### Run the code
 
 To train the baseline model without target data, simply run:
 ```
-python main.py --use_target --save_model --target $target_domain$ --checkpoint_dir $checkpoint$ \
-			   --max_epoch 200 --save_epoch 50 --batch_size 128 \
+python train.py --use_target --save_model --target $target_domain$ --checkpoint_dir $checkpoint$ \
+			   --max_epoch 30 --save_epoch 1 --batch_size 128 \
 			   --record_folder $path_record$
 ```
 
 To train the full model of CP-MSUDA, simply run:
 ```
-python main.py --use_target --save_model --target $target_domain$ --checkpoint_dir $checkpoint$ \
-			   --max_epoch 200 --save_epoch 50 --batch_size 128 \
+python train.py --use_target --save_model --target $target_domain$ --checkpoint_dir $checkpoint$ \
+			   --max_epoch 30 --save_epoch 1 --batch_size 128 \
 			   --record_folder $path_record$
 ```
+
+To evaluate the CP-MSUDA model, you can run:
+
+```
+python test.py --target $target_domain$ --load_checkpoint $checkpoint_file$
+```
+
+
+
+### Acknowledgements
+
+Some codes are adapted from [Ltc-MSUDA](https://github.com/ChrisAllenMing/LtC-MSDA.). We thank them for their excellent projects.
+### Contact
+If you have any problem about our code, feel free to contact zifengxie25@gmail.com or describe your problem in Issues.
