@@ -1,4 +1,4 @@
-# CP-MSUDA
+# PC-MSUDA
 A PyTorch implementation of 'Combined Prototype for Multi-source Unsupervised
 Domain Adaptation'.
 
@@ -6,9 +6,9 @@ Domain Adaptation'.
 
 The contributions of this paper are summarized as follows. 
 
-*  Toward the MSUDA problem, We propose a contrastive combined prototype method,named CP-MSUDA. Such a method can measure the transferable abilities of each source by calculating combined prototypes. The combined prototypes can help reflect the features of each class in source domains.
+*  Toward the MSUDA problem, We propose a contrastive combined prototype method,named PC-MSUDA. Such a method can measure the transferable abilities of each source by calculating combined prototypes. The combined prototypes can help reflect the features of each class in source domains.
 + We design a simple yet efficient method to compute the optimal weights of the source domain prototypes and provide a rigorous theoretical proof.
-+ In CP-MSUDA, we propose a coarse-grained alignment strategy to alleviate the issue of low-confidence information loss. Such a strategy estimate low-confidence target samples with maximum mean discrepancy.
++ In PC-MSUDA, we propose a coarse-grained alignment strategy to alleviate the issue of low-confidence information loss. Such a strategy estimate low-confidence target samples with maximum mean discrepancy.
 
 + Extensive experiments on three widely used benchmark datasets obtain interpretable results, which demonstrate superior and effective performance compared to the existing approaches.
 
@@ -37,14 +37,14 @@ python train.py --use_target --save_model --target $target_domain$ --checkpoint_
 			   --record_folder $path_record$
 ```
 
-To train the full model of CP-MSUDA, simply run:
+To train the full model of PC-MSUDA, simply run:
 ```
 python train.py --use_target --save_model --target $target_domain$ --checkpoint_dir $checkpoint$ \
 			   --max_epoch 30 --save_epoch 1 --batch_size 128 \
 			   --record_folder $path_record$
 ```
 
-To evaluate the CP-MSUDA model, you can run:
+To evaluate the PC-MSUDA model, you can run:
 
 ```
 python test.py --target $target_domain$ --load_checkpoint $checkpoint_file$
