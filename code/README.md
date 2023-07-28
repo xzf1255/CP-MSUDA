@@ -6,7 +6,7 @@ Domain Adaptation'.
 
 The contributions of this paper are summarized as follows. 
 
-*  Toward the MSUDA problem, We propose a contrastive combined prototype method,named PC-MSUDA. Such a method can measure the transferable abilities of each source by calculating combined prototypes. The combined prototypes can help reflect the features of each class in source domains.
+*  Toward the MSUDA problem, we propose a contrastive combined prototype method,named PC-MSUDA. Such a method can measure the transferable abilities of each source by calculating combined prototypes. The combined prototypes can help reflect the features of each class in source domains.
 + We design a simple yet efficient method to compute the optimal weights of the source domain prototypes and provide a rigorous theoretical proof.
 + In PC-MSUDA, we propose a coarse-grained alignment strategy to alleviate the issue of low-confidence information loss. Such a strategy estimate low-confidence target samples with maximum mean discrepancy.
 
